@@ -4,7 +4,7 @@ Assignment: To create this for simple web application to show the list Restauran
 
 ## Demo
 
-![demo](https://cdn.pic.in.th/file/picinth/Screenshot-2023-08-15-at-01.27.54.png)
+![demo](https://cdn.pic.in.th/file/picinth/Screenshot-2023-08-15-at-01.27.54.jpeg)
 
 ## Installation
 

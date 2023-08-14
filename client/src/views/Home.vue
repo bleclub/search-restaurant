@@ -53,7 +53,7 @@
 import { onMounted, ref } from 'vue';
 import { GoogleMap, MarkerCluster, Marker, InfoWindow } from 'vue3-google-map';
 import { RestaurantResult } from '@/types/restaurantResult.ts';
-import axios from 'axios';
+import { api } from '@/service/api';
 import Header from '@/components/Header.vue';
 import ListRestaurant from '@/components/ListRestaurants.vue';
 
@@ -76,10 +76,7 @@ const queryText = ref<string>('บางซื่อ');
 // Function call to API endpoint to get list of restaurants
 const getRestaurants = async (query: string = 'บางซื่อ') => {
     try {
-        const response = await axios.get(
-            `http://localhost:5001/api/restaurant/search/?query=${query}`
-        );
-
+        const response = await api.get(`/restaurant/search/?query=${query}`);
         restaurants.value = [];
         places.value = [];
         loading.value = true;
