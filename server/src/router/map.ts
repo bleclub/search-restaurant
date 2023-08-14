@@ -1,3 +1,4 @@
+import { verifyToken } from './../middleware/verifyToken';
 import {
     searchRestaurant,
     searchRestaurantAxios,
@@ -6,5 +7,6 @@ import express from 'express';
 
 export const mapRouter = express.Router();
 
-mapRouter.get('/restaurant', searchRestaurantAxios);
-mapRouter.get('/restaurant/search', searchRestaurant);
+// Protect route via verfyToken before to access the route
+mapRouter.get('/restaurant', verifyToken, searchRestaurantAxios);
+mapRouter.get('/restaurant/search', verifyToken, searchRestaurant);

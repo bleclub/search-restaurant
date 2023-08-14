@@ -1,15 +1,40 @@
 <template>
     <div
-        class="mb-5 block max-w-screen-sm cursor-pointer rounded-lg bg-slate-50 shadow-md"
+        class="flex h-36 max-w-screen-sm cursor-pointer items-center justify-between border-b bg-slate-50 px-4 py-4 hover:bg-gray-100"
         @click="handleClick(restaurant.geometry.location)"
     >
+        <div class="w-[70%] pr-3">
+            <h5
+                class="text-md text-tm_blue mb-2 text-[1rem] font-medium leading-none"
+            >
+                {{ restaurant.name }}
+            </h5>
+            <p class="mb-4 text-sm font-normal leading-4 text-tm_drakblue">
+                {{ restaurant.formatted_address }}
+            </p>
+            <p
+                class="text-[.8rem]"
+                :class="
+                    !restaurant?.opening_hours?.open_now
+                        ? 'text-red-600'
+                        : 'text-green-600'
+                "
+            >
+                {{
+                    !restaurant?.opening_hours?.open_now
+                        ? 'Close now'
+                        : 'Open now'
+                }}
+            </p>
+        </div>
+
         <div
-            class="relative overflow-hidden bg-cover bg-no-repeat"
+            class="relative w-[84px] overflow-hidden bg-cover bg-no-repeat"
             data-te-ripple-init
             data-te-ripple-color="light"
         >
             <img
-                class="h-60 w-full rounded-t-lg object-cover"
+                class="h-[84px] w-[84px] rounded-md object-cover"
                 :src="photoUrl"
                 :alt="restaurant.name"
             />
@@ -17,16 +42,6 @@
             <div
                 class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"
             ></div>
-        </div>
-        <div class="p-4">
-            <h5
-                class="mb-2 text-[1rem] text-xl font-medium leading-tight text-neutral-800"
-            >
-                {{ restaurant.name }}
-            </h5>
-            <p class="mb-4 text-sm text-neutral-600">
-                {{ restaurant.formatted_address }}
-            </p>
         </div>
     </div>
 </template>

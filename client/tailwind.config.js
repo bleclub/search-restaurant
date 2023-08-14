@@ -6,6 +6,7 @@ export default {
             colors: {
                 tm_drakblue: '#111827',
                 tm_yellow: '#eec804',
+                tm_blue: '#2743be',
             },
             backgroundImage: (theme) => ({
                 'banner-pattern': "url('assets/images/bg-pettern.jpg')",

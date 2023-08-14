@@ -1,16 +1,16 @@
 <template>
     <Header @submit="getRestaurants" />
-    <div class="bg-tm_drakblue mx-auto w-auto p-3">
+    <div class="mx-auto w-auto bg-tm_drakblue p-3">
         <h2 class="text-center text-xl text-white">
             {{ queryText }}
         </h2>
     </div>
-    <div class="flex">
+    <div class="flex flex-col sm:flex-row">
         <!-- List Restaurant -->
         <div
-            class="z-[99] flex h-screen w-[30rem] flex-col overflow-auto bg-slate-50 px-5 py-8 pb-80 shadow-lg"
+            class="z-[99] order-last flex h-full max-w-full flex-col overflow-auto bg-slate-50 shadow-lg sm:h-screen sm:w-[30rem] sm:pb-[310px]"
         >
-            <div class="flex justify-center" v-if="loading">
+            <div class="mt-20 flex justify-center" v-if="loading">
                 <span class="loader"></span>
             </div>
             <ListRestaurant
@@ -22,9 +22,11 @@
         </div>
 
         <!-- Google Map Display -->
-        <div class="flex max-h-screen w-full flex-col">
+        <div
+            class="flex h-[45vh] max-h-screen w-full flex-col sm:order-last sm:h-screen sm:flex-row"
+        >
             <GoogleMap
-                class="h-[68vh] w-full"
+                class="h-full w-full sm:pb-[310px]"
                 :api-key="apiKey"
                 :center="center"
                 :zoom="zoom"
