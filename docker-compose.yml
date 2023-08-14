@@ -1,0 +1,26 @@
+version: '3.4'
+services:
+  # To build the server container
+  server:
+    container_name: restaurant-server
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    volumes:
+      - ./server/:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "5001:5001"
+    command: npm run dev
+  # To build the client container
+  client:
+    container_name: restaurant-client
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    volumes:
+      - ./client/:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "8000:8000"
+    command: npm run dev
