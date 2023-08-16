@@ -4,7 +4,11 @@ Assignment: To create this for simple web application to show the list Restauran
 
 ## Preview
 
-![preview](https://cdn.pic.in.th/file/picinth/Screenshot-2023-08-15-at-01.27.546c5ef2b32080227d.jpeg)
+![preview](https://raw.githubusercontent.com/bleclub/search-restaurant/main/assets/preview.jpg?token=GHSAT0AAAAAACFSYYFRLG6OIDUKZNH75KAYZG4PVNA)
+
+## System Architecture Diagram
+
+![diagram](https://raw.githubusercontent.com/bleclub/search-restaurant/main/assets/diagram.jpg?token=GHSAT0AAAAAACFSYYFRLG6OIDUKZNH75KAYZG4PVNA)
 
 ## Installation
 
@@ -26,5 +30,12 @@ Step instructions to get the project up and running.
 To run tests, run the following command
 
 ```bash
-  npm run test
+To test client side
+  cd client
+  npm run test:watch
+
+To test server side
+  cd server
+  npm run test:watch
+
 ```
