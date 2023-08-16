@@ -4,11 +4,11 @@ Assignment: To create this for simple web application to show the list Restauran
 
 ## Preview
 
-![preview](https://raw.githubusercontent.com/bleclub/search-restaurant/main/assets/preview.jpg?token=GHSAT0AAAAAACFSYYFRLG6OIDUKZNH75KAYZG4PVNA)
+![preview](https://raw.githubusercontent.com/bleclub/search-restaurant/main/assets/preview.jpg?token=GHSAT0AAAAAACFSYYFR7GW6C6XBXXMRECHUZG4TNHQ)
 
 ## System Architecture Diagram
 
-![diagram](https://raw.githubusercontent.com/bleclub/search-restaurant/main/assets/diagram.jpg?token=GHSAT0AAAAAACFSYYFRLG6OIDUKZNH75KAYZG4PVNA)
+![diagram](https://raw.githubusercontent.com/bleclub/search-restaurant/main/assets/diagram.jpg?token=GHSAT0AAAAAACFSYYFQUFKVEUU7V7FK6RRIZG4TL3A)
 
 ## Installation
 
