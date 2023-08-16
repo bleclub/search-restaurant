@@ -1,5 +1,5 @@
 <template>
-    <Header @submit="getRestaurants" />
+    <Header @submit="getRestaurants" data-test="header" />
     <div class="mx-auto w-auto bg-tm_drakblue p-3">
         <h2 class="text-center text-xl text-white">
             {{ queryText }}
@@ -14,6 +14,7 @@
                 <span class="loader"></span>
             </div>
             <ListRestaurant
+                data-test="list-restaurant"
                 v-for="(restaurant, index) in restaurants"
                 :restaurant="restaurant"
                 :key="index"
@@ -26,6 +27,7 @@
             class="flex h-[45vh] max-h-screen w-full flex-col sm:order-last sm:h-screen sm:flex-row"
         >
             <GoogleMap
+                data-test="google-map"
                 class="h-full w-full sm:pb-[310px]"
                 :api-key="apiKey"
                 :center="center"

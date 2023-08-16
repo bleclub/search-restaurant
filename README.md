@@ -2,9 +2,9 @@
 
 Assignment: To create this for simple web application to show the list Restaurant using Google map API which users can enter a keyword to search location to get the list of Restaurant on that location.
 
-## Demo
+## Preview
 
-![demo](https://cdn.pic.in.th/file/picinth/Screenshot-2023-08-15-at-01.27.54.jpeg)
+![preview](https://cdn.pic.in.th/file/picinth/Screenshot-2023-08-15-at-01.27.546c5ef2b32080227d.jpeg)
 
 ## Installation
 

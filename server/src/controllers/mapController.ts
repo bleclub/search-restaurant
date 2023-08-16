@@ -7,6 +7,7 @@ import {
     TextSearchResponse,
 } from '@googlemaps/google-maps-services-js';
 
+// Test Google Map API call with Axios
 export const searchRestaurantAxios = async (req: Request, res: Response) => {
     const { query } = req.query;
     try {
@@ -20,8 +21,6 @@ export const searchRestaurantAxios = async (req: Request, res: Response) => {
                 },
             },
         );
-
-        console.log(response.data);
         res.json(response.data);
     } catch (error) {
         res.status(500).json({ error: 'An error occurred' });
@@ -41,10 +40,9 @@ export const searchRestaurant = async (req: Request, res: Response) => {
 
     try {
         let nextPageToken: string | undefined = '';
-
         const response: TextSearchResponse = await googleMapClient.textSearch({
             params: {
-                query: (query as string) || 'Bang Sue',
+                query: (query as string) || 'บางซื่อ',
                 radius: 500,
                 type: PlaceType1.restaurant,
                 pagetoken: nextPageToken,

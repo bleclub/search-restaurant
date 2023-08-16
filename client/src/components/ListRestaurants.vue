@@ -2,6 +2,7 @@
     <div
         class="flex h-36 max-w-screen-sm cursor-pointer items-center justify-between border-b bg-slate-50 px-4 py-4 hover:bg-gray-100"
         @click="handleClick(restaurant.geometry.location)"
+        data-testid="list-restaurant"
     >
         <div class="w-[70%] pr-3">
             <h5
@@ -37,6 +38,7 @@
                 class="h-[84px] w-[84px] rounded-md object-cover"
                 :src="photoUrl"
                 :alt="restaurant.name"
+                data-testid="photo-url"
             />
 
             <div
