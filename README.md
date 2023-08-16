@@ -32,7 +32,7 @@ To run tests, run the following command
 ```bash
 To test client side
   cd client
-  npm run test:watch
+  npm run test:uint
 
 To test server side
   cd server
